@@ -38,6 +38,7 @@ RSpec.describe MessagesController, :type => :controller do
 
   describe "GET index" do
     it "assigns all messages as @messages" do
+      byebug
       message = Message.create! valid_attributes
       get :index, {}, valid_session
       expect(assigns(:messages)).to eq([message])

@@ -1,0 +1,7 @@
+<h1>All users</h1>
+<ul>
+  <% @users.each do |user| %>
+ 	<li><span><%= user.name%></span> <%= link_to "Trimite", new_message_path(receiver: user.id, sender: "1") %> <%= link_to "Distrugere", user, method: :delete, data: { confirm: 'Are you sure?' }  %></li>
+  <% end %>
+</ul>
+<%= link_to "New User", controller: "users", action: "new" %>

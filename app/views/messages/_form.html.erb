@@ -15,11 +15,14 @@
     <%= f.label :text %><br>
     <%= f.text_field :text %>
   </div>
- 
+
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
+  <%= f.hidden_field :receiver_id , value: params[:receiver] %>
+  <%= f.hidden_field :sender_id , value: params[:sender] %>
 
   <div class="actions">
     <%= f.submit %>
